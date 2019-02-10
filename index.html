@@ -152,7 +152,44 @@
 			
 
 			<!-- Start blog Area -->
-			
+			<section class="contact-area" id="contact">
+				<div class="container-fluid">
+					<div class="row d-flex justify-content-end align-items-center">
+						<div class="col-lg-5 col-md-12 contact-left no-padding">
+							<img class="img-fluid" src="img/tugas LTKA.jpg" alt="">
+						</div>
+						<div class="col-lg-7 col-md-12 contact-right no-padding">
+							<h1>Tugas LTKA A3</h1>
+							<p>
+								#include <Servo.h>
+
+								int position = 0;
+
+								int i = 0;
+
+								int analogValue = 0;
+
+								int outputvalue = 0;
+
+								Servo servo_9;
+
+								void setup()
+								{
+  									pinMode(A0, INPUT);
+  									servo_9.attach(9);
+
+								}
+
+								void loop()
+								{
+  									analogValue = 0;
+  									analogValue = analogRead(A0);
+  									outputvalue = map(analogValue, 0, 1023, 0, 180);
+  									servo_9.write(outputvalue);
+  									delay(10); // Delay a little bit to improve simulation performance
+								}
+							</p>
+						</div>
 			<!-- end blog Area -->	
 
 			<!-- Start contact Area -->
